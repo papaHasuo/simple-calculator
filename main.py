@@ -4,7 +4,7 @@ from mcp.server.fastmcp import FastMCP
 mcp = FastMCP("simple-calculator")
 
 @mcp.tool()
-async def add(a: int, b: int) -> int:
+def add(a: int, b: int) -> int:
     """二つの引数を足して返す関数
 
     Args:
@@ -14,7 +14,7 @@ async def add(a: int, b: int) -> int:
     return a + b
 
 @mcp.tool()
-async def minus(a: int, b: int) -> int:
+def minus(a: int, b: int) -> int:
     """二つの引数を引いて返す関数
 
     Args:
@@ -24,7 +24,7 @@ async def minus(a: int, b: int) -> int:
     return a - b
 
 @mcp.tool()
-async def multiply(a: int, b: int) -> int:
+def multiply(a: int, b: int) -> int:
     """二つの引数を掛けて返す関数
 
     Args:
@@ -34,7 +34,7 @@ async def multiply(a: int, b: int) -> int:
     return a * b
 
 @mcp.tool()
-async def divide(a: int, b: int) -> float:
+def divide(a: int, b: int) -> float:
     """二つの引数を割って返す関数
 
     Args:
